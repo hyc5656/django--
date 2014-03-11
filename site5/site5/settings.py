@@ -1,5 +1,5 @@
 """
-Django settings for site4 project.
+Django settings for site5 project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/dev/topics/settings/
@@ -17,18 +17,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6=ww0_#(r2hw*@7xkos-ry&jrh9wl55qtffg2u#)h$mc1$yx4k'
+SECRET_KEY = '^u3^-zxvou-*vedw^v=+!f&w4mfqg@or*w05e^)8nh8tnayify'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_DIRS=(
+    '/home/hyc/djangoapp/site5/template',
+)
+
 ALLOWED_HOSTS = []
 
-TEMPLATE_DIRS =(
-    '/home/hyc/djangoapp/site4/template/',
-)
 
 # Application definition
 
@@ -42,19 +43,18 @@ INSTALLED_APPS = (
     'app1',
 )
 
-
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-#    'django.middleware.csrf.CsrfViewMiddleware',
+ #   'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'site4.urls'
+ROOT_URLCONF = 'site5.urls'
 
-WSGI_APPLICATION = 'site4.wsgi.application'
+WSGI_APPLICATION = 'site5.wsgi.application'
 
 
 # Database
@@ -74,7 +74,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-LANGUAGE_CODE = 'zh-CN'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 

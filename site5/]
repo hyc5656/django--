@@ -1,0 +1,8 @@
+from django.shortcuts import render_to_response
+from django.http import HttpResponse,HttpResponseRedirect
+from django import forms
+from app1.models import User
+
+# Create your views here.
+def reg(req):
+    return HttpResponse('nice')
