@@ -17,6 +17,8 @@ def reg(req):
 	    user.img=uf.cleaned_data['img']
 	    user.save()
 	    return HttpResponseRedirect(r'/success/')
+        else :
+	    return render_to_response('register.html',{'f':uf})
     else:
         uf=uform()
 	return render_to_response('register.html',{'f':uf})

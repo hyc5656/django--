@@ -1,7 +1,25 @@
 <html>
 <head>
 <title>注册</title>
-<body>
+<script>
+var count=10
+function up()
+{
+    if(count>0)
+    {
+        status=count--;
+    }
+}
+</script>
+<body onload="setInterval('up()',1000);">
+<p onmouseover="alert('支持javascript');">
+一个段落
+</p>
+{% if f.errors %}
+<p style="color: red;">
+    Please correct the error{{ form.errors|pluralize }} below.
+</p>
+{% endif %}
 <form method='post' enctype='multipart/form-data'>
 {{f.as_p}}
 <input type="submit" value="submit" />
