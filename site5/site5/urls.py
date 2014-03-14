@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^app1/','app1.views.reg'),
     url(r'^success/','app1.views.suc'),
+    url(r'^logout/','app1.views.logout'),
 )

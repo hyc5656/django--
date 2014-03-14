@@ -16,6 +16,7 @@ def reg(req):
 	    user.username=uf.cleaned_data['username']
 	    user.img=uf.cleaned_data['img']
 	    user.save()
+	    req.session['usr']=user.username
 	    return HttpResponseRedirect(r'/success/')
         else :
 	    return render_to_response('register.html',{'f':uf})
@@ -24,4 +25,9 @@ def reg(req):
 	return render_to_response('register.html',{'f':uf})
 
 def suc(req):
-    return HttpResponse('<h1>register successfully</h1>')
+    username=req.session['usr']
+    return render_to_response('success.html',{'username':username})
+
+def logout(req):
+    del req.session['usr']
+    return HttpResponse("logout!!")
